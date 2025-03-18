@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/TheArchitJain/DevOps_Automation.git'
-            }
-        }
+   stage('Clone Repository') {
+    steps {
+        git branch: 'main', url: 'https://github.com/TheArchitJain/DevOps_Automation.git'
+    }
+}
+
         stage('Build') {
             steps {
                 echo 'Building the project...'
